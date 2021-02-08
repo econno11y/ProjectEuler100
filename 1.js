@@ -23,4 +23,19 @@ function multiplesOf3and5(number) {
     return sum;
 }
 
+//this one's easier to understand
+function multiplesOf3and5(number) {
+    var sum = 0;
+    var n = 1;
+
+    while (n * 3 < number) {
+      sum += n * 3;
+      if (n * 5 % 3 > 0 && n * 5 < number) {
+        sum += n * 5;
+      }
+      n++;
+    }
+    return sum;
+  }
+
 multiplesOf3and5(1000);
